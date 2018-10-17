@@ -12,6 +12,10 @@
 		0763A7B0217508B0004DB7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0763A7AE217508B0004DB7CF /* Main.storyboard */; };
 		0763A7B2217508B1004DB7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0763A7B1217508B1004DB7CF /* Assets.xcassets */; };
 		0763A7B5217508B1004DB7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0763A7B3217508B1004DB7CF /* LaunchScreen.storyboard */; };
+		0763A7BD2176194E004DB7CF /* video-games.png in Resources */ = {isa = PBXBuildFile; fileRef = 0763A7BC2176194E004DB7CF /* video-games.png */; };
+		0763A7C5217636C6004DB7CF /* GameLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C4217636C6004DB7CF /* GameLibraryViewController.swift */; };
+		0763A7C7217653D2004DB7CF /* gameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */; };
+		0763A7C921766474004DB7CF /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C821766474004DB7CF /* game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		0763A7B1217508B1004DB7CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0763A7B4217508B1004DB7CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0763A7B6217508B1004DB7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0763A7BC2176194E004DB7CF /* video-games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-games.png"; sourceTree = "<group>"; };
+		0763A7C4217636C6004DB7CF /* GameLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryViewController.swift; sourceTree = "<group>"; };
+		0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameTableViewCell.swift; sourceTree = "<group>"; };
+		0763A7C821766474004DB7CF /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				0763A7B1217508B1004DB7CF /* Assets.xcassets */,
 				0763A7B3217508B1004DB7CF /* LaunchScreen.storyboard */,
 				0763A7B6217508B1004DB7CF /* Info.plist */,
+				0763A7BC2176194E004DB7CF /* video-games.png */,
+				0763A7C4217636C6004DB7CF /* GameLibraryViewController.swift */,
+				0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */,
+				0763A7C821766474004DB7CF /* game.swift */,
 			);
 			path = VideoGameLibraryProject;
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 				0763A7B5217508B1004DB7CF /* LaunchScreen.storyboard in Resources */,
 				0763A7B2217508B1004DB7CF /* Assets.xcassets in Resources */,
 				0763A7B0217508B0004DB7CF /* Main.storyboard in Resources */,
+				0763A7BD2176194E004DB7CF /* video-games.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +150,9 @@
 			files = (
 				0763A7AD217508B0004DB7CF /* ViewController.swift in Sources */,
 				0763A7AB217508B0004DB7CF /* AppDelegate.swift in Sources */,
+				0763A7C921766474004DB7CF /* game.swift in Sources */,
+				0763A7C5217636C6004DB7CF /* GameLibraryViewController.swift in Sources */,
+				0763A7C7217653D2004DB7CF /* gameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

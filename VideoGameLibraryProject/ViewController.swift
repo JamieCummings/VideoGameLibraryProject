@@ -9,12 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   
+    @IBOutlet weak var viewLibraryButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func pushedLibraryButton(_ sender: Any) {
+    }
+    
 }
 
