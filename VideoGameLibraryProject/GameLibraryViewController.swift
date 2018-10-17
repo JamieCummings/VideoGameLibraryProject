@@ -10,11 +10,9 @@ import UIKit
 
 class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var gameArray = [Game(title: "NBA2K", description: "basketball", genre: "sport", rating: "E"), Game(title: "blah", description: "blah2", genre: "MMO", rating: "T")]
-    
     // This function can be used to tell how many sections we will have
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameArray.count
+        return GameManager.sharedInstance.getGameCount()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -26,7 +24,7 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell") as! gameTableViewCell
-        let currentGame = gameArray[indexPath.row]
+        let currentGame = GameManager.sharedInstance.getGame(at: indexPath.row)
         cell.titleLabel.text = currentGame.title
         cell.ratingLabel.text = currentGame.rating
         
@@ -40,12 +38,12 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-       tableView.deselectRow(at: indexPath, animated: true)
+       
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameArray[0].checkedIn = false
     }
         // Do any additional setup after loading the view.
         
