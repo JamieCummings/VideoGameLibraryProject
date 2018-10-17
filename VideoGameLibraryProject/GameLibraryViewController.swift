@@ -49,7 +49,9 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     }
         // Do any additional setup after loading the view.
         
-   
+    @IBAction func unwindToGameLibraryList(segue: UIStoryboardSegue){
+        
+    }
     
     /*
      // MARK: - Navigation

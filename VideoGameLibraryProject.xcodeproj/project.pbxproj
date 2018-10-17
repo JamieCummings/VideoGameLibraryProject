@@ -16,6 +16,7 @@
 		0763A7C5217636C6004DB7CF /* GameLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C4217636C6004DB7CF /* GameLibraryViewController.swift */; };
 		0763A7C7217653D2004DB7CF /* gameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */; };
 		0763A7C921766474004DB7CF /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C821766474004DB7CF /* game.swift */; };
+		0763A7CB21776F5D004DB7CF /* addGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7CA21776F5D004DB7CF /* addGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0763A7C4217636C6004DB7CF /* GameLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryViewController.swift; sourceTree = "<group>"; };
 		0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameTableViewCell.swift; sourceTree = "<group>"; };
 		0763A7C821766474004DB7CF /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
+		0763A7CA21776F5D004DB7CF /* addGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				0763A7C4217636C6004DB7CF /* GameLibraryViewController.swift */,
 				0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */,
 				0763A7C821766474004DB7CF /* game.swift */,
+				0763A7CA21776F5D004DB7CF /* addGameViewController.swift */,
 			);
 			path = VideoGameLibraryProject;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				0763A7AB217508B0004DB7CF /* AppDelegate.swift in Sources */,
 				0763A7C921766474004DB7CF /* game.swift in Sources */,
 				0763A7C5217636C6004DB7CF /* GameLibraryViewController.swift in Sources */,
+				0763A7CB21776F5D004DB7CF /* addGameViewController.swift in Sources */,
 				0763A7C7217653D2004DB7CF /* gameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

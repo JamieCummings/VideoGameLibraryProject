@@ -255,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="1712.8" y="841.52923538230891"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Game View Controller-->
         <scene sceneID="YR9-wy-Sne">
             <objects>
-                <viewController id="z1h-K2-XF0" sceneMemberID="viewController">
+                <viewController id="z1h-K2-XF0" customClass="addGameViewController" customModule="VideoGameLibraryProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mQl-CB-dGS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,9 +271,16 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="newGameTitleField:" destination="TPM-uE-KRT" eventType="editingDidEnd" id="xXF-B1-7ha"/>
+                                </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXf-UG-vI6">
                                 <rect key="frame" x="-8" y="285" width="414" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="z1h-K2-XF0" id="QH4-l8-huH"/>
+                                    <outlet property="delegate" destination="z1h-K2-XF0" id="tH4-h5-8UP"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pci-dU-LR9">
                                 <rect key="frame" x="20" y="256" width="374" height="21"/>
@@ -305,6 +312,9 @@
                                     <segment title="M"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.1043378405" blue="0.1213977856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="ratingSegment:" destination="TPM-uE-KRT" eventType="valueChanged" id="WNh-ef-jGn"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discription of Game:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWa-41-PGF">
                                 <rect key="frame" x="20" y="535" width="374" height="21"/>
@@ -333,6 +343,9 @@
                                 <state key="normal" title="addNewGameButton">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newGameButtonTapped:" destination="z1h-K2-XF0" eventType="touchUpInside" id="Kc7-ee-dgm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Game " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojT-Vc-qfR">
                                 <rect key="frame" x="20" y="88" width="374" height="31"/>
@@ -389,8 +402,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jcn-cD-d29"/>
                     </view>
+                    <connections>
+                        <outlet property="addNewGameButton" destination="eFc-qF-1YK" id="OHS-aa-a0e"/>
+                        <outlet property="discriptionTextField" destination="mOz-B8-LQC" id="orh-BB-3ag"/>
+                        <outlet property="genrePicker" destination="lXf-UG-vI6" id="QBm-Rt-gce"/>
+                        <outlet property="newTitleTextField" destination="fXj-94-IIV" id="TIT-tU-JzW"/>
+                        <outlet property="ratingSegment" destination="YZJ-lT-P9k" id="jYF-Su-EVK"/>
+                        <segue destination="TPM-uE-KRT" kind="unwind" identifier="unwindToGameLibraryList" unwindAction="unwindToGameLibraryListWithSegue:" id="d1H-7L-Pf5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf5-Bq-j0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TPM-uE-KRT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2523.1884057971015" y="132.58928571428572"/>
         </scene>
