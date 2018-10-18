@@ -12,7 +12,9 @@ class GameManager {
     static let sharedInstance = GameManager() 
 // we are creating a private initalizer so that no instance of this class can  be made anywhere else
     private init () {
+        gameArray[0].dueDate = Date() 
     }
+    
     
     // the array of games that will be useed throughout the application
     
@@ -33,5 +35,9 @@ class GameManager {
         gameArray.append(game)
     }
 
+    // func to remove a game from the library using the index we want to remove 
+    func removeGame(at index: Int){
+        gameArray.remove(at: index)
+    }
 
 }

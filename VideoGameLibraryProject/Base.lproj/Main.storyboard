@@ -98,11 +98,11 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03/30/1986" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-Wu-hL2">
-                                                    <rect key="frame" x="285" y="11" width="91" height="21"/>
+                                                    <rect key="frame" x="285" y="11" width="91" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="91" id="K8h-hh-XWZ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -152,6 +152,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="gameLibraryTableView" destination="ojg-Je-RYY" id="bUb-kq-YfT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJq-I9-qA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,7 +334,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="ROA-vs-XWj"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -382,6 +384,7 @@
                     </view>
                     <connections>
                         <outlet property="addNewGameButton" destination="eFc-qF-1YK" id="OHS-aa-a0e"/>
+                        <outlet property="discriptionText" destination="0kx-ut-oxG" id="bsZ-PS-ekP"/>
                         <outlet property="genrePicker" destination="lXf-UG-vI6" id="QBm-Rt-gce"/>
                         <outlet property="newTitleTextField" destination="fXj-94-IIV" id="TIT-tU-JzW"/>
                         <outlet property="ratingSegment" destination="YZJ-lT-P9k" id="jYF-Su-EVK"/>

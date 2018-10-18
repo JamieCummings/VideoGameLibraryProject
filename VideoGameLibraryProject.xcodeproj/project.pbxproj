@@ -18,6 +18,7 @@
 		0763A7C921766474004DB7CF /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C821766474004DB7CF /* game.swift */; };
 		0763A7CB21776F5D004DB7CF /* addGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7CA21776F5D004DB7CF /* addGameViewController.swift */; };
 		0763A7EB2177ACCB004DB7CF /* gameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7EA2177ACCB004DB7CF /* gameManager.swift */; };
+		0763A7ED2178BFE6004DB7CF /* utilities .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7EC2178BFE6004DB7CF /* utilities .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0763A7C821766474004DB7CF /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		0763A7CA21776F5D004DB7CF /* addGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGameViewController.swift; sourceTree = "<group>"; };
 		0763A7EA2177ACCB004DB7CF /* gameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameManager.swift; sourceTree = "<group>"; };
+		0763A7EC2178BFE6004DB7CF /* utilities .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "utilities .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				0763A7AA217508B0004DB7CF /* AppDelegate.swift */,
+				0763A7EC2178BFE6004DB7CF /* utilities .swift */,
 				0763A7EA2177ACCB004DB7CF /* gameManager.swift */,
 				0763A7AC217508B0004DB7CF /* ViewController.swift */,
 				0763A7AE217508B0004DB7CF /* Main.storyboard */,
@@ -161,6 +164,7 @@
 				0763A7CB21776F5D004DB7CF /* addGameViewController.swift in Sources */,
 				0763A7EB2177ACCB004DB7CF /* gameManager.swift in Sources */,
 				0763A7C7217653D2004DB7CF /* gameTableViewCell.swift in Sources */,
+				0763A7ED2178BFE6004DB7CF /* utilities .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
