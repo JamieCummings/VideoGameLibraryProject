@@ -12,7 +12,6 @@ class GameManager {
     static let sharedInstance = GameManager() 
 // we are creating a private initalizer so that no instance of this class can  be made anywhere else
     private init () {
-        gameArray[0].dueDate = Date() 
     }
     
     
@@ -35,9 +34,24 @@ class GameManager {
         gameArray.append(game)
     }
 
-    // func to remove a game from the library using the index we want to remove 
+    // func to remove a game from the library using the index we want to remove
     func removeGame(at index: Int){
         gameArray.remove(at: index)
+    }
+    
+    //func to check in or out a game
+    func checkGameInOrOut(at index: Int) {
+        let gameForIndex = gameArray[index]
+        gameArray[index].checkedIn = !gameArray[index].checkedIn
+        
+        if gameForIndex.checkedIn {
+            // remove andy existing due date
+            gameForIndex.dueDate = nil
+        } else{
+            //add a new due date, since the game has just been checked out
+            gameForIndex.dueDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())
+        }
+        
     }
 
 }

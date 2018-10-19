@@ -12,7 +12,7 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var gameLibraryTableView: UITableView!
     
-    
+    var currentGame: Game!
     
     // This function can be used to tell how many sections we will have
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,6 +51,14 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?
+            EditGameViewController{
+            //we need to pass through the Game that we'll be editing
+            destination.gameToEdit = currentGame
+        }
+    }
+    
     // this func allows us to return an array of actions that the row will have, if any
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
@@ -62,7 +70,21 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
-        return [deleteAction]
+        let gameforIndex = GameManager.sharedInstance.getGame(at: indexPath.row)
+        let title = gameforIndex.checkedIn ? "Check Out" : "Check In"
+        let checkOutOrInAction = UITableViewRowAction(style: .normal, title: title) { (_, _) in
+            GameManager.sharedInstance.checkGameInOrOut(at: indexPath.row)
+            tableView.reloadRows(at: [indexPath], with: .fade)
+        }
+        let showEditScreenAction = UITableViewRowAction(style: .normal, title: "Edit") { (_, _) in
+            self.currentGame = GameManager.sharedInstance.getGame(at: indexPath.row)
+            self.performSegue(withIdentifier: "segToEdit", sender: self)
+        
+        }
+        
+        showEditScreenAction.backgroundColor = UIColor.blue
+        
+        return [deleteAction, checkOutOrInAction, showEditScreenAction]
     }
     
     
@@ -76,9 +98,13 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidAppear(animated)
         gameLibraryTableView.reloadData()
     }
-    @IBAction func unwindToGameLibraryList(segue: UIStoryboardSegue){
+    @IBAction func unwindToGameLibraryList(segue:
+        UIStoryboardSegue, sender: Any?){
+        
+        }
         
     }
+
     
     /*
      // MARK: - Navigation
@@ -90,4 +116,4 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
      }
      */
     
-}
+
