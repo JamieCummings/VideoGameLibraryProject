@@ -8,7 +8,7 @@
 
 import Foundation
 import RealmSwift
-
+import UserNotifications
 
 class GameManager {
     // shared instance of the GameManager class
@@ -64,6 +64,24 @@ class GameManager {
             } else{
                 //add a new due date, since the game has just been checked out
                 gameForIndex.dueDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())
+                
+                let center  = UNUserNotificationCenter.current()
+                
+                let content = UNMutableNotificationContent()
+                content.title = gameForIndex.title
+                content.body = "Your game is due!"
+                
+                let triggerDate =
+                    Calendar.current.dateComponents([.year,.month, .day, .hour, .minute, .second], from: gameForIndex.dueDate!)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                
+                let identifier = gameForIndex.title
+                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                
+                center.add(request, withCompletionHandler: {error in if let error = error{
+                    //something went wrong
+                    print(error.localizedDescription)
+                    }})
             }
             
         }
