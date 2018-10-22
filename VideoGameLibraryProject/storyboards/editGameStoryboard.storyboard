@@ -89,6 +89,7 @@
                                             <color key="titleColor" red="1" green="0.1043378405" blue="0.1213977856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
+                                            <action selector="editButtonTapped:" destination="kvO-eU-Mx3" eventType="touchUpInside" id="kmT-co-RIM"/>
                                             <action selector="submitEditButton:" destination="kvO-eU-Mx3" eventType="touchUpInside" id="9z5-0v-3wG"/>
                                         </connections>
                                     </button>

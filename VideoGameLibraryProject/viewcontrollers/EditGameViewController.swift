@@ -90,6 +90,21 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Do any additional setup after loading the view.
     }
     
+    func error() {
+        let errorAlert = UIAlertController(title: "ERROR", message: "Please fill out all info to add a new game.", preferredStyle: .alert)
+    }
+    
+    @IBAction func editButtonTapped(_ sender: Any) {
+        
+        // this will allow the new edits to be submitted
+        guard let title = editTitle.text, title.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+            let gameDescription = editDiscription.text,
+            gameDescription.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+                error()
+                //show an error and return
+                return
+        }
+    }
     
     
     /*
