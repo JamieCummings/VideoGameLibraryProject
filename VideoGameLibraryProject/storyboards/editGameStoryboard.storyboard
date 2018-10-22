@@ -49,9 +49,6 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="editDiscripton:" destination="kvO-eU-Mx3" eventType="editingDidEnd" id="dPh-sI-1Ga"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajg-mX-cwb">
                                         <rect key="frame" x="0.0" y="301.5" width="375" height="60.5"/>
@@ -62,11 +59,10 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K9O-pi-6Vt">
                                         <rect key="frame" x="0.0" y="362" width="375" height="61"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                            <segment title=""/>
-                                            <segment title=""/>
-                                            <segment title=""/>
+                                            <segment title="E"/>
+                                            <segment title="E10+"/>
+                                            <segment title="T"/>
+                                            <segment title="M"/>
                                         </segments>
                                         <color key="tintColor" red="1" green="0.1043378405" blue="0.1213977856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </segmentedControl>
@@ -118,9 +114,11 @@
                         <outlet property="editGenrePicker" destination="Pee-fc-eD5" id="KEQ-Tj-6pM"/>
                         <outlet property="editRatingSeg" destination="K9O-pi-6Vt" id="eI5-Fc-r6I"/>
                         <outlet property="editTitle" destination="UKB-Pa-KWs" id="19I-0B-41h"/>
+                        <segue destination="EhS-Ss-psX" kind="unwind" identifier="unwindToGameList" unwindAction="unwindToGameLibraryListWithSegue:" id="I7M-ms-T34"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JtN-RL-sd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EhS-Ss-psX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-124" y="47"/>
         </scene>

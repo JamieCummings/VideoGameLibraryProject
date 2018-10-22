@@ -42,7 +42,12 @@ class addGameViewController: UIViewController,UIPickerViewDelegate, UIPickerView
     
     func error() {
         let errorAlert = UIAlertController(title: "ERROR", message: "Please fill out all info to add a new game.", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title:"Close", style: .default, handler: nil)
+        errorAlert.addAction(closeAction)
+        self.present(errorAlert, animated: true, completion: nil)
     }
+    
+    //This will run when the new game button is tapped
     @IBAction func newGameButtonTapped(_ sender: Any) {
         guard let title = newTitleTextField.text, title.trimmingCharacters(in: .whitespacesAndNewlines) != "",
             let gameDescription = discriptionText.text,
@@ -51,8 +56,9 @@ class addGameViewController: UIViewController,UIPickerViewDelegate, UIPickerView
                 //show an error and return
                 return
         }
-        
+        // shows the ratig is a variable 
         var rating: String!
+        
         // this will take the input selected in the segment
         switch ratingSegment.selectedSegmentIndex {
         case 0:
@@ -65,22 +71,24 @@ class addGameViewController: UIViewController,UIPickerViewDelegate, UIPickerView
             rating = "M"
         default:
             rating = "E"
-        
+            
         }
         
+        // get the genre for the Game
         let genre = pickerData[genrePicker.selectedRow(inComponent: 0)]
         
-        let newGame = Game(title: title, description: gameDescription, genre: genre, rating: rating)
+        //default initalizer for the Game class, this will create a Game using the default values that were set in the Game class.
+        let newGame = Game()
+        //setting the properties for the new game using dot notation
+        newGame.title = title
+        newGame.gameDescription = gameDescription
+        newGame.genre = genre
+        newGame.rating = rating
+        
         
         GameManager.sharedInstance.addGame(game: newGame)
         
-        
-        
-        
-        
-        
-        
-        self.performSegue(withIdentifier: "unwindToGameLibraryList", sender: self)
+        self.performSegue(withIdentifier: "unwindToGameLibrary", sender: self)
     }
     
     

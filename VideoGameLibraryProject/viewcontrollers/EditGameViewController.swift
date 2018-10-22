@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -40,9 +42,9 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(gameToEdit.title)
+        print(gameToEdit.description)
         editTitle.text = gameToEdit.title
-        editDiscription.text = gameToEdit.description
+        editDiscription.text = gameToEdit.gameDescription
         
         
         switch gameToEdit.rating {
@@ -57,6 +59,8 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         default:
             editRatingSeg.selectedSegmentIndex = 0
         }
+        
+        
         
         switch gameToEdit.genre {
         case "Massively Multiplayer Online":
@@ -87,11 +91,15 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             editGenrePicker.selectRow(0, inComponent: 0, animated: false)
         }
         
+        
         // Do any additional setup after loading the view.
     }
     
     func error() {
         let errorAlert = UIAlertController(title: "ERROR", message: "Please fill out all info to add a new game.", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title:"Close", style: .default, handler: nil)
+        errorAlert.addAction(closeAction)
+        self.present(errorAlert, animated: true, completion: nil)
     }
     
     @IBAction func editButtonTapped(_ sender: Any) {
@@ -104,6 +112,33 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 //show an error and return
                 return
         }
+        
+        var rating: String!
+        
+        switch editRatingSeg.selectedSegmentIndex {
+        case 0:
+            rating = "E"
+        case 1:
+            rating = "E10+"
+        case 2:
+            rating = "T"
+        case 3:
+            rating = "M"
+        default:
+            rating = "E"
+        }
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            gameToEdit.title = title
+            gameToEdit.gameDescription = gameDescription
+            gameToEdit.rating = rating
+            gameToEdit.genre = pickerData[editGenrePicker.selectedRow(inComponent: 0)]
+        }
+        
+        
+        self.performSegue(withIdentifier: "unwindToGameList", sender: self)
     }
     
     

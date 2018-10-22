@@ -20,7 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a6-3u-pH3">
                                 <rect key="frame" x="20" y="692" width="374" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <state key="normal" title="viewLibraryButton"/>
+                                <state key="normal" title="View Library"/>
                                 <connections>
                                     <action selector="pushedLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMQ-Ud-Je2"/>
                                     <segue destination="fwO-al-Sur" kind="show" id="VvS-Pz-Wyy"/>
@@ -62,7 +62,7 @@
         <!--Video Game Library-->
         <scene sceneID="uyu-LW-Wwc">
             <objects>
-                <viewController id="fwO-al-Sur" customClass="GameLibraryViewController" customModule="VideoGameLibraryProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="unwindToGameLibraryList" id="fwO-al-Sur" customClass="GameLibraryViewController" customModule="VideoGameLibraryProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="43t-9a-F8l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="unwindToGameLibraryList"/>
                         <constraints>
                             <constraint firstItem="n56-wV-ljn" firstAttribute="bottom" secondItem="ojg-Je-RYY" secondAttribute="bottom" id="EjB-i9-98a"/>
                             <constraint firstItem="ojg-Je-RYY" firstAttribute="leading" secondItem="n56-wV-ljn" secondAttribute="leading" id="XUl-4f-Jgi"/>
@@ -148,7 +149,7 @@
                     <navigationItem key="navigationItem" title="Video Game Library" id="wA5-dq-JRb">
                         <barButtonItem key="rightBarButtonItem" title="Add Game" id="WTo-wh-RHu">
                             <connections>
-                                <segue destination="z1h-K2-XF0" kind="show" id="4e6-d7-Rdv"/>
+                                <segue destination="z1h-K2-XF0" kind="show" identifier="" id="4e6-d7-Rdv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -220,11 +221,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFc-qF-1YK">
                                 <rect key="frame" x="20" y="720" width="374" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="addNewGameButton">
+                                <state key="normal" title="Add New Game ">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="newGameButtonTapped:" destination="z1h-K2-XF0" eventType="touchUpInside" id="Kc7-ee-dgm"/>
+                                    <action selector="newGameButtonTapped:" destination="z1h-K2-XF0" eventType="touchUpInside" id="BVm-nK-ciP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Game " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojT-Vc-qfR">
@@ -294,18 +295,18 @@
                         <viewLayoutGuide key="safeArea" id="jcn-cD-d29"/>
                     </view>
                     <connections>
-                        <outlet property="addNewGameButton" destination="eFc-qF-1YK" id="OHS-aa-a0e"/>
+                        <outlet property="addNewGameButton" destination="eFc-qF-1YK" id="UCy-jO-vT8"/>
                         <outlet property="discriptionText" destination="0kx-ut-oxG" id="bsZ-PS-ekP"/>
                         <outlet property="genrePicker" destination="lXf-UG-vI6" id="QBm-Rt-gce"/>
                         <outlet property="newTitleTextField" destination="fXj-94-IIV" id="TIT-tU-JzW"/>
                         <outlet property="ratingSegment" destination="YZJ-lT-P9k" id="jYF-Su-EVK"/>
-                        <segue destination="TPM-uE-KRT" kind="unwind" identifier="unwindToGameLibraryList" unwindAction="unwindToGameLibraryListWithSegue:" id="d1H-7L-Pf5"/>
+                        <segue destination="TPM-uE-KRT" kind="unwind" identifier="unwindToGameLibrary" unwindAction="unwindToGameLibraryListWithSegue:" id="thD-22-GYe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf5-Bq-j0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TPM-uE-KRT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2633" y="133"/>
+            <point key="canvasLocation" x="2631.8840579710145" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzR-TJ-soc">

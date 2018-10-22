@@ -18,9 +18,9 @@
 		0763A7C921766474004DB7CF /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7C821766474004DB7CF /* game.swift */; };
 		0763A7CB21776F5D004DB7CF /* addGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7CA21776F5D004DB7CF /* addGameViewController.swift */; };
 		0763A7EB2177ACCB004DB7CF /* gameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7EA2177ACCB004DB7CF /* gameManager.swift */; };
-		0763A7ED2178BFE6004DB7CF /* utilities .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7EC2178BFE6004DB7CF /* utilities .swift */; };
 		0763A7EF21790CFA004DB7CF /* editGameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0763A7EE21790CFA004DB7CF /* editGameStoryboard.storyboard */; };
 		0763A7F1217914E8004DB7CF /* EditGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7F0217914E8004DB7CF /* EditGameViewController.swift */; };
+		0763A7F7217E1EFF004DB7CF /* utilities .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763A7F6217E1EFF004DB7CF /* utilities .swift */; };
 		821AEF90C73E9E4410001D2F /* Pods_VideoGameLibraryProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE2D5A172ECB2E42DA79019 /* Pods_VideoGameLibraryProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +38,9 @@
 		0763A7C821766474004DB7CF /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		0763A7CA21776F5D004DB7CF /* addGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGameViewController.swift; sourceTree = "<group>"; };
 		0763A7EA2177ACCB004DB7CF /* gameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameManager.swift; sourceTree = "<group>"; };
-		0763A7EC2178BFE6004DB7CF /* utilities .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "utilities .swift"; sourceTree = "<group>"; };
 		0763A7EE21790CFA004DB7CF /* editGameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = editGameStoryboard.storyboard; sourceTree = "<group>"; };
 		0763A7F0217914E8004DB7CF /* EditGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameViewController.swift; sourceTree = "<group>"; };
+		0763A7F6217E1EFF004DB7CF /* utilities .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "utilities .swift"; sourceTree = "<group>"; };
 		7AE2D5A172ECB2E42DA79019 /* Pods_VideoGameLibraryProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoGameLibraryProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1732C7037DD5C49E8D47156 /* Pods-VideoGameLibraryProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoGameLibraryProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoGameLibraryProject/Pods-VideoGameLibraryProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B637684EC99AC2B368D0FC82 /* Pods-VideoGameLibraryProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoGameLibraryProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoGameLibraryProject/Pods-VideoGameLibraryProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 				0763A7AA217508B0004DB7CF /* AppDelegate.swift */,
 				0763A7F3217A14C1004DB7CF /* storyboards */,
 				0763A7F4217A14FA004DB7CF /* viewcontrollers */,
-				0763A7EC2178BFE6004DB7CF /* utilities .swift */,
 				0763A7F5217A1607004DB7CF /* componets */,
 				0763A7B1217508B1004DB7CF /* Assets.xcassets */,
 				0763A7B6217508B1004DB7CF /* Info.plist */,
@@ -126,6 +125,7 @@
 				0763A7EA2177ACCB004DB7CF /* gameManager.swift */,
 				0763A7C821766474004DB7CF /* game.swift */,
 				0763A7C6217653D2004DB7CF /* gameTableViewCell.swift */,
+				0763A7F6217E1EFF004DB7CF /* utilities .swift */,
 			);
 			path = componets;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 				0763A7F1217914E8004DB7CF /* EditGameViewController.swift in Sources */,
 				0763A7C921766474004DB7CF /* game.swift in Sources */,
 				0763A7C5217636C6004DB7CF /* GameLibraryViewController.swift in Sources */,
+				0763A7F7217E1EFF004DB7CF /* utilities .swift in Sources */,
 				0763A7CB21776F5D004DB7CF /* addGameViewController.swift in Sources */,
 				0763A7EB2177ACCB004DB7CF /* gameManager.swift in Sources */,
 				0763A7C7217653D2004DB7CF /* gameTableViewCell.swift in Sources */,
-				0763A7ED2178BFE6004DB7CF /* utilities .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

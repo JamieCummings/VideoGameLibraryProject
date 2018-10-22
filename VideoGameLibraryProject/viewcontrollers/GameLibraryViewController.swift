@@ -99,11 +99,8 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
         gameLibraryTableView.reloadData()
     }
     @IBAction func unwindToGameLibraryList(segue:
-        UIStoryboardSegue, sender: Any?){
-        
-        }
-        
-    }
+        UIStoryboardSegue){ }
+}
 
     
     /*
