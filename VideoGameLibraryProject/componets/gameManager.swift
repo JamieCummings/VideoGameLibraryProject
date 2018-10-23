@@ -65,6 +65,7 @@ class GameManager {
                 //add a new due date, since the game has just been checked out
                 gameForIndex.dueDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())
                 
+                // schedule a local notification at the time of the game's due date
                 let center  = UNUserNotificationCenter.current()
                 
                 let content = UNMutableNotificationContent()
