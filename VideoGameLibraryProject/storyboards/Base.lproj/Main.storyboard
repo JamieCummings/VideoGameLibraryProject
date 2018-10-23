@@ -26,8 +26,8 @@
                                     <segue destination="fwO-al-Sur" kind="show" id="VvS-Pz-Wyy"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video-games.png" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-vT-s5v">
-                                <rect key="frame" x="20" y="88" width="374" height="564"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images.png" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-vT-s5v">
+                                <rect key="frame" x="20" y="88" width="374" height="506"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Video Game Library " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK0-v5-hkX">
                                 <rect key="frame" x="20" y="648" width="374" height="36"/>
@@ -39,13 +39,17 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0cg-vT-s5v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Fc-zk-Z1A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0cg-vT-s5v" secondAttribute="trailing" constant="20" id="ApD-bn-wL9"/>
                             <constraint firstItem="gK0-v5-hkX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E0g-Za-YUJ"/>
                             <constraint firstItem="gK0-v5-hkX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="560" id="Hrd-vt-Ro8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2a6-3u-pH3" secondAttribute="trailing" constant="20" id="IRH-23-pag"/>
+                            <constraint firstItem="gK0-v5-hkX" firstAttribute="top" secondItem="0cg-vT-s5v" secondAttribute="bottom" constant="54" id="Q6k-GF-tkD"/>
                             <constraint firstItem="2a6-3u-pH3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cmS-Gy-Tr3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gK0-v5-hkX" secondAttribute="trailing" constant="20" id="dJd-om-Fd4"/>
                             <constraint firstItem="0cg-vT-s5v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fBH-DF-Lbz"/>
                             <constraint firstItem="2a6-3u-pH3" firstAttribute="top" secondItem="gK0-v5-hkX" secondAttribute="bottom" constant="8" id="g0w-mA-1TE"/>
+                            <constraint firstItem="0cg-vT-s5v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mcz-Zd-0v9"/>
+                            <constraint firstItem="0cg-vT-s5v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nIA-78-gqU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0cg-vT-s5v" secondAttribute="trailing" constant="20" id="vFz-Jq-8cq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -328,6 +332,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="video-games.png" width="600" height="564"/>
+        <image name="images.png" width="238" height="212"/>
     </resources>
 </document>
