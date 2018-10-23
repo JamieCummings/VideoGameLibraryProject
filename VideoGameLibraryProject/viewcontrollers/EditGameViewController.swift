@@ -11,7 +11,7 @@ import RealmSwift
 
 
 class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     var gameToEdit: Game!
     
     // this func shows how many componets the view needs
@@ -76,7 +76,7 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         case "Action":
             editGenrePicker.selectRow(5, inComponent: 0, animated: false)
         case "Stealth Shooter":
-             editGenrePicker.selectRow(6, inComponent: 0, animated: false)
+            editGenrePicker.selectRow(6, inComponent: 0, animated: false)
         case "Combat":
             editGenrePicker.selectRow(7, inComponent: 0, animated: false)
         case "First Person Shooters":
@@ -86,8 +86,8 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         case "Role-Playing":
             editGenrePicker.selectRow(10, inComponent: 0, animated: false)
         case "Educational":
-             editGenrePicker.selectRow(11, inComponent: 0, animated: false)
-            default:
+            editGenrePicker.selectRow(11, inComponent: 0, animated: false)
+        default:
             editGenrePicker.selectRow(0, inComponent: 0, animated: false)
         }
         
@@ -143,13 +143,13 @@ class EditGameViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

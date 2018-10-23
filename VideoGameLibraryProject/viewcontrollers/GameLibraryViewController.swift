@@ -79,7 +79,7 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
         let showEditScreenAction = UITableViewRowAction(style: .normal, title: "Edit") { (_, _) in
             self.currentGame = GameManager.sharedInstance.getGame(at: indexPath.row)
             self.performSegue(withIdentifier: "segToEdit", sender: self)
-        
+            
         }
         
         showEditScreenAction.backgroundColor = UIColor.blue
@@ -102,15 +102,15 @@ class GameLibraryViewController: UIViewController, UITableViewDelegate, UITableV
         UIStoryboardSegue){ }
 }
 
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
+
 
